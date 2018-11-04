@@ -54,7 +54,8 @@ def process_file(filename, file1, file2):
     counts = 0 # number of application with "Certified" status. 
 
     # Read in the file
-    fh = open(filename, 'r', encoding="utf8")
+    fh = open(filename, 'r')
+     
     raw = csv.reader(fh, delimiter=sep)
     header = next(raw, None)
     idx = getidx(header)
