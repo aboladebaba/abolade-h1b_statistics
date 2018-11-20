@@ -71,7 +71,7 @@ def process_file(filename, file1, file2):
     ##Top 10 occupation
     occp_file = []
     for k,v in occupation.items():
-        temp = k, v, (v/counts)*100
+        temp = k, v, (float(v)/counts)*100
         occp_file.append(temp)
 
     sorted_occp_file = sorted(sorted(occp_file, key= lambda x: (x[0])), key=lambda k: k[1], reverse=True)
@@ -87,7 +87,7 @@ def process_file(filename, file1, file2):
     ##top 10 states output
     state_file = []
     for k,v in states.items():
-        temp = k, v, (v/counts)*100
+        temp = k, v, (float(v)/counts)*100
         state_file.append(temp)
 
     sorted_state_file = sorted(sorted(state_file, key= lambda x: (x[0])), key=lambda k: k[1], reverse=True)
